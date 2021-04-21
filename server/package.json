@@ -9,6 +9,7 @@
   "author": "RB",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "connect-history-api-fallback": "^1.6.0",
     "connect-pg-simple": "^6.2.1",
     "cors": "^2.8.5",
