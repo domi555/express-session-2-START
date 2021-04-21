@@ -49,7 +49,7 @@ export default {
       // enter your code here
       const { data } = axios({
         method: 'post',
-        url: 'http://localhost:3000/login',
+        url: '/login',
         data: {
           email: this.email,
           password: this.password,
