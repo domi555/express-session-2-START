@@ -48,7 +48,7 @@ export default {
     async login() {
       // enter your code here
       try {
-        const { data } = axios({
+        const { data } = await axios({
           method: 'post',
           url: '/login',
           data: {

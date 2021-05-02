@@ -61,8 +61,8 @@ export default {
   },
   created() {
     // enter your code here
-    const local_data = localStorage.getItem('user');
-    console.log(local_data);
+    const local_data = JSON.parse(localStorage.getItem('user'));
+    if (local_data) this.user = local_data;
   },
 };
 </script>

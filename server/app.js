@@ -13,6 +13,8 @@ const app = express();
 app.use(morgan('dev'));
 
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(history());
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(express.json());
 
@@ -39,10 +41,6 @@ app.use(
     },
   }),
 );
-
-app.use(express.static(path.join(__dirname, '/public')));
-app.use(history());
-app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', routes);
 
