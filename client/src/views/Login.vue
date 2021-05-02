@@ -47,17 +47,21 @@ export default {
   methods: {
     async login() {
       // enter your code here
-      const { data } = axios({
-        method: 'post',
-        url: '/login',
-        data: {
-          email: this.email,
-          password: this.password,
-        },
-      });
-      const local_data = JSON.stringify({ id: data.id, name: data.name });
-      localStorage.setItem('user', local_data);
-      this.$router.push({ name: 'Home' });
+      try {
+        const { data } = axios({
+          method: 'post',
+          url: '/login',
+          data: {
+            email: this.email,
+            password: this.password,
+          },
+        });
+        const local_data = JSON.stringify({ id: data.id, name: data.name });
+        localStorage.setItem('user', local_data);
+        this.$router.push({ name: 'Home' });
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };

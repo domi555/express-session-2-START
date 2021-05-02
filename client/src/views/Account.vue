@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 export default {
   data() {
     return {
@@ -32,6 +32,7 @@ export default {
   },
   async created() {
     // enter your code here
+
   },
 };
 </script>

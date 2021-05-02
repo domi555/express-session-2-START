@@ -16,6 +16,7 @@
 export default {
   async created() {
     // enter your code here
+    localStorage.removeItem('user');
   },
 };
 </script>
