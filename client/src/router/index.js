@@ -31,6 +31,10 @@ const routes = [
     path: '/logout',
     name: 'Logout',
     component: Logout,
+    beforeEnter: (to, from, next) => {
+      if (!isAuthenticated()) next({ name: 'Login' });
+      next();
+    },
   },
   {
     path: '/register',

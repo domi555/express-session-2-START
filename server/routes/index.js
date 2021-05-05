@@ -36,7 +36,7 @@ router.post('/register', (req, res) => {
     const exists = users.find((el) => el.email == email) ? true : false;
     if (!exists) {
       const user = {
-        id: Math.max(users.map((el) => el.id)),
+        id: Math.max(...users.map((el) => el.id)) + 1,
         email,
         name,
         password,
